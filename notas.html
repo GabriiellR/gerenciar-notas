@@ -10,12 +10,28 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
+<style>
+    .command-panel {
+        display: flex;
+        width: 100%;
+
+    }
+
+    @media only screen and (max-width: 1080px) {
+        .command-panel {
+            display: flex;
+            flex-direction: column;
+            margin-top: 4px;
+        }
+    }
+</style>
+
 <body>
 
     <nav>
         <div class="nav-wrapper teal" style="padding-left: 10px;">
-            <a href="#" class="brand-logo">Gestão de alunos</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#" class="brand-logo">Notas</a>
+            <ul id="nav-mobile" class="right">
                 <li><a onclick="loginClass.RemoverSessao();">Sair</a></li>
             </ul>
         </div>
@@ -23,7 +39,7 @@
 
     <br>
     <div class="row">
-        <div class="col s12 m12 l3">
+        <div class="col s12 m12 l3 command-panel">
             <a class='dropdown-trigger btn' href='#' data-target='dropdown-aluno'>Aluno</a>
             <ul id='dropdown-aluno' class='dropdown-content'>
                 <li><a href="#cadastrar-aluno" class="modal-trigger">Cadastrar</a></li>
@@ -32,7 +48,7 @@
             </ul>
         </div>
 
-        <div class="col s12 m12 l3">
+        <div class="col s12 m12 l3 command-panel">
             <a class='dropdown-trigger btn' href='#' data-target='dropdown-materia'>Matéria</a>
             <ul id='dropdown-materia' class='dropdown-content'>
                 <li><a href="#cadastrar-materia" class="modal-trigger">Cadastrar</a></li>
@@ -41,7 +57,7 @@
             </ul>
         </div>
 
-        <div class="col s12 m12 l3">
+        <div class="col s12 m12 l3 command-panel">
             <a class='dropdown-trigger btn' href='#' data-target='dropdown-turma'>Turma</a>
             <ul id='dropdown-turma' class='dropdown-content'>
                 <li><a href="#cadastrar-turma" class="modal-trigger">Cadastrar</a></li>
@@ -50,7 +66,7 @@
             </ul>
         </div>
 
-        <div class="col s12 m12 l3">
+        <div class="col s12 m12 l3 command-panel">
             <a class='dropdown-trigger btn' href='#' data-target='dropdown-notas'>Notas</a>
             <ul id='dropdown-notas' class='dropdown-content'>
                 <li><a href="#cadastrar-notas" class="modal-trigger">Cadastrar</a></li>
