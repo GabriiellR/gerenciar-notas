@@ -1,41 +1,25 @@
 class Login {
 
-    url = `${helperClass.urlBase}/alunos`;
+    url = `${helperClass.urlBase}/administradores`;
 
-    CarregarInformacoesLogin() {
-        var btnSignin = document.querySelector("#signin");
-        var btnSignup = document.querySelector("#signup");
+    async RealizarLogin() {
 
-        var body = document.querySelector("body");
+        var email = $('#email-login').val();
+        var senha = $('#senha-login').val();
 
-
-        btnSignin.addEventListener("click", function () {
-            body.className = "sign-in-js";
-        });
-
-        btnSignup.addEventListener("click", function () {
-            body.className = "sign-up-js";
-        })
-    }
-
-     RealizarLogin() {
-
-
-        var email = $('#email').val();
-        var senha = $('#senha').val();
-
-        var cadastros = this.BuscarCadastros();
+        var cadastros = await this.BuscarCadastros();
 
         $.each(cadastros, (index, cadastro) => {
 
-            if(cadastro.senha == senha && cadastro.email == email){
-                alert('login bem-sucedio');
+            if (cadastro.senha == senha && cadastro.email == email) {
+                cadastro.senha = null;
+
+                localStorage.setItem('sessao', JSON.stringify(cadastro));
+                location.href = "notas.html";
                 return;
             }
 
-
             alert('Senha ou usuário inválidos')
-
         });
     }
 
@@ -58,11 +42,10 @@ class Login {
         })
     }
 
-     CadastrarAluno() {
-
+    RemoverSessao() {
+        localStorage.removeItem('sessao');
+        location.href = "index.html";
     }
-
-
 }
 
 var loginClass = new Login();

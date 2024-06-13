@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de notas</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper teal" style="padding-left: 10px;">
+            <a href="#" class="brand-logo">Gestão de alunos</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a onclick="loginClass.RemoverSessao();">Sair</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <div class="row">
+        <div class="col s12 m12 l3">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Aluno</a>
+
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#cadastrar-aluno" class="modal-trigger">Cadastrar</a></li>
+                <li><a href="#!" class="modal-trigger">Deletar</a></li>
+                <li><a href="#!" class="modal-trigger">Editar</a></li>
+            </ul>
+        </div>
+
+        <div class="col s12 m12 l3">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matéria</a>
+
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Cadastrar</a></li>
+                <li><a href="#!">Deletar</a></li>
+                <li><a href="#!">Editar</a></li>
+            </ul>
+        </div>
+
+        <div class="col s12 m12 l3">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Turma</a>
+
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Cadastrar</a></li>
+                <li><a href="#!">Deletar</a></li>
+                <li><a href="#!">Editar</a></li>
+            </ul>
+        </div>
+
+        <div class="col s12 m12 l3">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Notas</a>
+
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Cadastrar</a></li>
+                <li><a href="#!">Deletar</a></li>
+                <li><a href="#!">Editar</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <table class="centered" id="notas">
+                <thead>
+                    <th>Id</th>
+                    <th>Aluno</th>
+                    <th>Nota</th>
+                    <th>Materia</th>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal" id="cadastrar-aluno">
+        <div class="modal-content">
+            <h4>Cadastrar Aluno</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o nome do aluno" id="nome-aluno" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o telefone" id="telefone-aluno" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o endereço" id="endereco-aluno" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o email" id="email-aluno" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/helperClass.js"></script>
+    <script src="./js/aluno.js"></script>
+    <script src="./js/materia.js"></script>
+    <script src="./js/notas.js"></script>
+    <script src="./js/login.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            notasClass.CarregarTelaNotas();
+        })
+    </script>
+</body>
+
+</html>

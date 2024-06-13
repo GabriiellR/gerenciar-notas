@@ -1,0 +1,64 @@
+{
+    "administradores": [
+        {
+            "id": 1,
+            "nome": "Relton",
+            "email": "admin@123.com",
+            "senha": "123"
+        }
+    ],
+    "alunos": [
+        {
+            "id": 1,
+            "nome": "Gabriel Dias",
+            "telefone": "123",
+            "endereco": "Rua x numero y",
+            "email": "fulano@ciclano.com.br"
+        },
+        {
+            "id": 2,
+            "nome": "Matheus Costa",
+            "telefone": "123",
+            "endereco": "Rua x numero y",
+            "email": "fulano@ciclano.com.br"
+        }
+    ],
+    "notas": [
+        {
+            "id": 1,
+            "alunoId": 1,
+            "nota": 100,
+            "materia": "Analise de dados"
+        },
+        {
+            "id": 2,
+            "alunoId": 2,
+            "nota": 98,
+            "materia": "Ingles instrumental"
+        }
+    ],
+    "materia": [
+        {
+            "nome": "Analise de dados",
+            "periodo": 9
+        },
+        {
+            "nome": "Ingles instrumental",
+            "periodo": 6
+        }
+    ],
+    "presenca": [
+        {
+            "alunoId": 1,
+            "presente": true,
+            "data": 1106
+        }
+    ],
+    "turma": [
+        {
+            "nome": "Analise de dados",
+            "sala": 206,
+            "turno": "noite"
+        }
+    ]
+}
