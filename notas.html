@@ -24,42 +24,38 @@
     <br>
     <div class="row">
         <div class="col s12 m12 l3">
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Aluno</a>
-
-            <ul id='dropdown1' class='dropdown-content'>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown-aluno'>Aluno</a>
+            <ul id='dropdown-aluno' class='dropdown-content'>
                 <li><a href="#cadastrar-aluno" class="modal-trigger">Cadastrar</a></li>
-                <li><a href="#!" class="modal-trigger">Deletar</a></li>
-                <li><a href="#!" class="modal-trigger">Editar</a></li>
+                <li><a href="#deletar-aluno" class="modal-trigger">Deletar</a></li>
+                <li><a href="#editar-aluno" class="modal-trigger">Editar</a></li>
             </ul>
         </div>
 
         <div class="col s12 m12 l3">
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Matéria</a>
-
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Cadastrar</a></li>
-                <li><a href="#!">Deletar</a></li>
-                <li><a href="#!">Editar</a></li>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown-materia'>Matéria</a>
+            <ul id='dropdown-materia' class='dropdown-content'>
+                <li><a href="#cadastrar-materia" class="modal-trigger">Cadastrar</a></li>
+                <li><a href="#deletar-materia" class="modal-trigger">Deletar</a></li>
+                <li><a href="#editar-materia" class="modal-trigger">Editar</a></li>
             </ul>
         </div>
 
         <div class="col s12 m12 l3">
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Turma</a>
-
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Cadastrar</a></li>
-                <li><a href="#!">Deletar</a></li>
-                <li><a href="#!">Editar</a></li>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown-turma'>Turma</a>
+            <ul id='dropdown-turma' class='dropdown-content'>
+                <li><a href="#cadastrar-turma" class="modal-trigger">Cadastrar</a></li>
+                <li><a href="#deletar-turma" class="modal-trigger">Deletar</a></li>
+                <li><a href="#editar-turma" class="modal-trigger">Editar</a></li>
             </ul>
         </div>
 
         <div class="col s12 m12 l3">
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Notas</a>
-
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Cadastrar</a></li>
-                <li><a href="#!">Deletar</a></li>
-                <li><a href="#!">Editar</a></li>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown-notas'>Notas</a>
+            <ul id='dropdown-notas' class='dropdown-content'>
+                <li><a href="#cadastrar-notas" class="modal-trigger">Cadastrar</a></li>
+                <li><a href="#deletar-notas" class="modal-trigger">Deletar</a></li>
+                <li><a href="#editar-notas" class="modal-trigger">Editar</a></li>
             </ul>
         </div>
     </div>
@@ -78,6 +74,7 @@
         </div>
     </div>
 
+    <!-- Modals Aluno -->
     <div class="modal" id="cadastrar-aluno">
         <div class="modal-content">
             <h4>Cadastrar Aluno</h4>
@@ -104,6 +101,193 @@
         </div>
     </div>
 
+    <div class="modal" id="deletar-aluno">
+        <div class="modal-content">
+            <h4>Deletar Aluno</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o ID do aluno" id="id-deletar-aluno" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-red btn">Deletar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="editar-aluno">
+        <div class="modal-content">
+            <h4>Editar Aluno</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o ID do aluno" id="id-editar-aluno" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo nome do aluno" id="nome-editar-aluno" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo telefone" id="telefone-editar-aluno" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo endereço" id="endereco-editar-aluno" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo email" id="email-editar-aluno" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-yellow btn">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Modals Matéria -->
+    <div class="modal" id="cadastrar-materia">
+        <div class="modal-content">
+            <h4>Cadastrar Matéria</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o nome da matéria" id="nome-materia" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn">Cadastrar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="deletar-materia">
+        <div class="modal-content">
+            <h4>Deletar Matéria</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o ID da matéria" id="id-deletar-materia" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-red btn">Deletar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="editar-materia">
+        <div class="modal-content">
+            <h4>Editar Matéria</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o ID da matéria" id="id-editar-materia" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo nome da matéria" id="nome-editar-materia" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-yellow btn">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Modals Turma -->
+    <div class="modal" id="cadastrar-turma">
+        <div class="modal-content">
+            <h4>Cadastrar Turma</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o nome da turma" id="nome-turma" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn">Cadastrar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="deletar-turma">
+        <div class="modal-content">
+            <h4>Deletar Turma</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o ID da turma" id="id-deletar-turma" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-red btn">Deletar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="editar-turma">
+        <div class="modal-content">
+            <h4>Editar Turma</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o ID da turma" id="id-editar-turma" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o novo nome da turma" id="nome-editar-turma" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-yellow btn">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Modals Notas -->
+    <div class="modal" id="cadastrar-notas">
+        <div class="modal-content">
+            <h4>Cadastrar Notas</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o ID do aluno" id="id-aluno-notas" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite a nota" id="nota" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn">Cadastrar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="deletar-notas">
+        <div class="modal-content">
+            <h4>Deletar Notas</h4>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" placeholder="Digite o ID da nota" id="id-deletar-notas" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-red btn">Deletar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="editar-notas">
+        <div class="modal-content">
+            <h4>Editar Notas</h4>
+            <div class="row">
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite o ID da nota" id="id-editar-notas" />
+                </div>
+                <div class="col s12 m12 l6 input-field">
+                    <input type="text" placeholder="Digite a nova nota" id="nota-editar" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-yellow btn">Salvar</button>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
@@ -116,6 +300,8 @@
     <script type="text/javascript">
         $(function () {
             notasClass.CarregarTelaNotas();
+            $('.modal').modal();
+            $('.dropdown-trigger').dropdown();
         })
     </script>
 </body>
